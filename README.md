@@ -1,3 +1,7 @@
-# Getting Started with Create React App
+### A simple Aim game, using react and typescript.
 
-### `npm start`
+![alt text](https://i.imgur.com/my13l1l.jpg)
+
+## npx create-react-app my-app --template typescript
+
+## npm start
