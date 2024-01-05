@@ -7,7 +7,7 @@ interface IProps {
     deleteDot: (id: number) => void
 }
 
-const SingleDot = ({ dot, deleteDot }: IProps) => {
+const SingleDot: React.FC<IProps> = ({ dot, deleteDot }: IProps) => {
     const [randTop, setRandTop] = useState(Math.floor(Math.random() * 90))
     const [randLeft, setRandLeft] = useState(Math.floor(Math.random() * 90))
 
