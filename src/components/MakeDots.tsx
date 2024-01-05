@@ -7,11 +7,14 @@ interface IDots {
     dots: IDot[]
     setDots: React.Dispatch<React.SetStateAction<IDot[]>>
     create: () => void
+    counter: number
+    setCounter: React.Dispatch<React.SetStateAction<number>>
 }
 
-const MakeDots: React.FC<IDots> = ({ dots, setDots, create }: IDots) => {
+const MakeDots: React.FC<IDots> = ({ dots, setDots, create, counter, setCounter }: IDots) => {
     const deleteDot = (id: number) => {
         setDots(dots.filter((dot) => dot.id != id))
+        setCounter(counter + 1)
         create()
     }
     return (
