@@ -4,12 +4,10 @@ import IDot from '../dotModel/dot';
 
 interface IProps {
     dot: IDot
-    dots: IDot[]
-    setDots: React.Dispatch<React.SetStateAction<IDot[]>>
     deleteDot: (id: number) => void
 }
 
-const SingleDot = ({ dot, dots, setDots, deleteDot }: IProps) => {
+const SingleDot = ({ dot, deleteDot }: IProps) => {
     const [randTop, setRandTop] = useState(Math.floor(Math.random() * 90))
     const [randLeft, setRandLeft] = useState(Math.floor(Math.random() * 90))
 
