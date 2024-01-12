@@ -10,7 +10,6 @@ interface IProps {
 const SingleDot: React.FC<IProps> = ({ dot, deleteDot }: IProps) => {
     const [randTop, setRandTop] = useState(Math.floor(Math.random() * 90))
     const [randLeft, setRandLeft] = useState(Math.floor(Math.random() * 90))
-
     return (
         <div className={`${styles.singleDot}`} onClick={() => deleteDot(dot.id)} style={{ top: `${randTop}%`, left: `${randLeft}%` }} >
         </div>

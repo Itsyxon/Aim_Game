@@ -1,5 +1,5 @@
 .startButton {
-    width: 100px;
+    width: 130px;
     height: 50px;
     background-color: rgb(19, 165, 6);
     font-family: 'Poppins', sans-serif;
@@ -10,10 +10,11 @@
     border: none;
     cursor: pointer;
     transition: .1s;
+    margin-right: 20px;
 }
 
 .resetButton {
-    width: 100px;
+    width: 130px;
     height: 50px;
     background-color: rgb(228, 53, 30);
     font-family: 'Poppins', sans-serif;
@@ -43,15 +44,8 @@
     align-items: center;
 }
 
-.buttons {
-    width: 250px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
 .counter {
-    font-size: 45px;
+    font-size: 55px;
     margin: 15px;
     color: white;
 }

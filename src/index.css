@@ -9,14 +9,17 @@
 font-family: 'Poppins', sans-serif; */
 
 body {
-  background-color: #111113;
+  background-color: #111115;
   font-family: 'Poppins', sans-serif;
   color: white;
 }
 
 h1 {
-  font-family: 'Bungee Spice', sans-serif;
+  /* font-family: 'Bungee Spice', sans-serif; */
   font-size: 64px;
   text-align: center;
   margin: 20px;
+  color: rgb(196, 0, 0);
+  text-shadow: 2px 4px 5px black;
+  letter-spacing: 2px;
 }

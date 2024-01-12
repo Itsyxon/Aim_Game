@@ -1,5 +1,4 @@
 import React from 'react';
-
 import styles from '../styles/GameSettings.module.css'
 import IDot from '../dotModel/dot';
 
@@ -19,7 +18,13 @@ const GameSettings: React.FC<IProps> = ({ create, counter, setCounter, setDots }
         <div className={styles.settings}>
             <div className={styles.counter}>{counter}</div>
             <div className={styles.buttons}>
-                <button className={styles.startButton} onClick={create}>Start</button>
+                {
+                    counter === 0 ? (
+                        <button className={`${styles.startButton}`} onClick={create}>Start</button>
+                    ) : (
+                        ''
+                    )
+                }
                 <button className={styles.resetButton} onClick={resetAll}>Reset</button>
             </div>
         </div>

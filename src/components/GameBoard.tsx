@@ -7,9 +7,8 @@ import GameSettings from './GameSettings';
 const GameBoard = () => {
     const [dots, setDots] = useState<IDot[]>([])
     const [counter, setCounter] = useState<number>(0)
-    const uniqueId = Date.now() + Math.random()
     const create = () => {
-        setDots([{ id: uniqueId }])
+        setDots([{ id: Date.now() }])
     }
     return (
         <>
