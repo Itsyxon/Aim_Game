@@ -6,13 +6,14 @@ import GameSettings from './GameSettings';
 
 const GameBoard = () => {
     const [dots, setDots] = useState<IDot[]>([])
-    const [counter, setCounter] = useState<number>(-1)
+    const [counter, setCounter] = useState<number>(0)
     const create = () => {
         setDots([{ id: Date.now() }])
+        console.log(counter + 1)
     }
     return (
         <>
-            <GameSettings create={create} counter={counter} setCounter={setCounter} setDots={setDots} />
+            <GameSettings dots={dots} create={create} counter={counter} setCounter={setCounter} setDots={setDots} />
             <div className={styles.gameboard}>
                 <MakeDots dots={dots} setDots={setDots} create={create} counter={counter} setCounter={setCounter} />
             </div>

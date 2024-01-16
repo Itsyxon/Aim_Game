@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import styles from '../styles/GameSettings.module.css'
 import IDot from '../dotModel/dot';
-import GameOver from './GameOver';
 
 interface IProps {
     create: () => void;
     counter: number
     setCounter: React.Dispatch<React.SetStateAction<number>>
     setDots: React.Dispatch<React.SetStateAction<IDot[]>>
+    dots: IDot[]
 }
 
-const GameSettings: React.FC<IProps> = ({ create, counter, setCounter, setDots }: IProps) => {
+const GameSettings: React.FC<IProps> = ({ create, counter, setCounter, setDots, dots }) => {
     const resetAll = (): void => {
-        setCounter(-1)
+        setCounter(0)
         setDots([])
     }
     const startAGame = () => {
@@ -22,10 +22,22 @@ const GameSettings: React.FC<IProps> = ({ create, counter, setCounter, setDots }
     }
     return (
         <div className={styles.settings}>
-            <div className={styles.counter}>{counter >= 0 ? counter : ''}</div>
+            <div className={styles.counter}>{counter >= 1 ? counter : ''}</div>
             <div className={styles.buttons}>
-                <button className={`${styles.startButton}`} onClick={startAGame}>Start</button>
-                <button className={styles.resetButton} onClick={resetAll}>Reset</button>
+                {
+                    dots.length === 0 ? (
+                        <button className={`${styles.startButton}`} onClick={startAGame}>Start</button>
+                    ) : (
+                        ""
+                    )
+                }
+                {
+                    dots.length >= 1 ? (
+                        <button className={styles.resetButton} onClick={resetAll}>Reset</button>
+                    ) : (
+                        ''
+                    )
+                }
             </div>
 
         </div>

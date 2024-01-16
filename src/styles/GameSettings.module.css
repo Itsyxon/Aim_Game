@@ -3,14 +3,13 @@
     height: 50px;
     background-color: rgb(19, 165, 6);
     font-family: 'Poppins', sans-serif;
-    color: rgb(19, 18, 18);
+    color: rgb(0, 0, 0);
     font-size: 30px;
     font-weight: 800;
     border-radius: 10px;
     border: none;
     cursor: pointer;
     transition: .1s;
-    margin-right: 20px;
 }
 
 .resetButton {
@@ -37,15 +36,7 @@
     box-shadow: 0 5px 5px black;
 }
 
-.settings {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 .counter {
     font-size: 55px;
-    margin: 15px;
     color: white;
 }

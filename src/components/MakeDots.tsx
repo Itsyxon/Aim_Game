@@ -15,6 +15,7 @@ const MakeDots: React.FC<IDots> = ({ dots, setDots, create, counter, setCounter 
         setDots(dots.filter((dot) => dot.id !== id))
         setCounter(counter + 1)
         create()
+
     }
     return (
         <>
