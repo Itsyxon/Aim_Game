@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from '../styles/GameSettings.module.css'
 import IDot from '../dotModel/dot';
+import GameOver from './GameOver';
 
 interface IProps {
     create: () => void;
@@ -11,22 +12,22 @@ interface IProps {
 
 const GameSettings: React.FC<IProps> = ({ create, counter, setCounter, setDots }: IProps) => {
     const resetAll = (): void => {
-        setCounter(0)
+        setCounter(-1)
         setDots([])
+    }
+    const startAGame = () => {
+        create()
+        setCounter(0)
+
     }
     return (
         <div className={styles.settings}>
-            <div className={styles.counter}>{counter}</div>
+            <div className={styles.counter}>{counter >= 0 ? counter : ''}</div>
             <div className={styles.buttons}>
-                {
-                    counter === 0 ? (
-                        <button className={`${styles.startButton}`} onClick={create}>Start</button>
-                    ) : (
-                        ''
-                    )
-                }
+                <button className={`${styles.startButton}`} onClick={startAGame}>Start</button>
                 <button className={styles.resetButton} onClick={resetAll}>Reset</button>
             </div>
+
         </div>
     );
 };

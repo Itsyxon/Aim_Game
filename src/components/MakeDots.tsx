@@ -17,11 +17,11 @@ const MakeDots: React.FC<IDots> = ({ dots, setDots, create, counter, setCounter 
         create()
     }
     return (
-        <div>
+        <>
             {dots.map((dot) => (
                 <SingleDot key={dot.id} dot={dot} deleteDot={deleteDot} />
             ))}
-        </div>
+        </>
     );
 };
 
