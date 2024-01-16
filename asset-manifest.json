@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Aim_Game/static/css/main.9612da53.css",
-    "main.js": "/Aim_Game/static/js/main.2b3a8710.js",
+    "main.css": "/Aim_Game/static/css/main.ad663fa3.css",
+    "main.js": "/Aim_Game/static/js/main.05d717a9.js",
     "index.html": "/Aim_Game/index.html",
-    "main.9612da53.css.map": "/Aim_Game/static/css/main.9612da53.css.map",
-    "main.2b3a8710.js.map": "/Aim_Game/static/js/main.2b3a8710.js.map"
+    "main.ad663fa3.css.map": "/Aim_Game/static/css/main.ad663fa3.css.map",
+    "main.05d717a9.js.map": "/Aim_Game/static/js/main.05d717a9.js.map"
   },
   "entrypoints": [
-    "static/css/main.9612da53.css",
-    "static/js/main.2b3a8710.js"
+    "static/css/main.ad663fa3.css",
+    "static/js/main.05d717a9.js"
   ]
 }
